@@ -1,0 +1,16 @@
+{
+  "name": "backend-ecobazar",
+  "version": "1.0.0",
+  "description": "ecobazar-backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "maryam-hafeez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.1"
+  }
+}
