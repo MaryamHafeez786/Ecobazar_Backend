@@ -1,1 +1,72 @@
-node_modules
+const fs = require('fs');
+const path = require('path');
+
+// Define .gitignore content for a Node.js project
+const gitignoreContent = `
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Environment files
+.env
+.env.test
+.env.production
+.env.local
+.env.*.local
+
+# Build files
+/build
+/dist
+/out
+.cache
+.next
+
+# Coverage directory
+coverage/
+
+# IDE files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+~*
+
+# Other
+.nyc_output/
+npm-shrinkwrap.json
+yarn.lock
+package-lock.json
+`;
+
+const filePath = path.join(process.cwd(), '.gitignore');
+
+// Write the .gitignore file
+fs.writeFile(filePath, gitignoreContent.trim(), (err) => {
+  if (err) {
+    console.error('Error writing .gitignore:', err);
+  } else {
+    console.log('.gitignore file has been created successfully!');
+  }
+});
